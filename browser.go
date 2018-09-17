@@ -133,6 +133,9 @@ notwebkit:
 	case strings.Contains(ua, "phantomjs"):
 		u.Browser.Name = BrowserBot
 
+	case strings.Contains(ua, "dalvik"):
+		u.Browser.Name = BrowserAndroid
+
 	default:
 		u.Browser.Name = BrowserUnknown
 

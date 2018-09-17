@@ -99,6 +99,14 @@ var testUAVars = []struct {
 		UserAgent{
 			Browser{BrowserFirefox, Version{40, 0, 0}}, OS{PlatformLinux, OSAndroid, Version{0, 0, 0}}, DevicePhone}},
 
+	{"dalvik/1.6.0 (linux; u; android 4.4.2; lenovo a5500-h build/kot49h)",
+		UserAgent{
+			Browser{BrowserAndroid, Version{0, 0, 0}}, OS{PlatformLinux, OSAndroid, Version{4, 4, 2}}, DevicePhone}},
+
+	{"Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-T705 Build/MMB29K)",
+		UserAgent{
+			Browser{BrowserAndroid, Version{0, 0, 0}}, OS{PlatformLinux, OSAndroid, Version{6, 0, 1}}, DeviceTablet}},
+
 	{"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0",
 		UserAgent{
 			Browser{BrowserFirefox, Version{38, 0, 0}}, OS{PlatformLinux, OSLinux, Version{0, 0, 0}}, DeviceComputer}},
@@ -782,6 +790,10 @@ var testUAVars = []struct {
 	{"Opera/9.80 (S60; SymbOS; Opera Mobi/352; U; de) Presto/2.4.15 Version/10.00",
 		UserAgent{
 			Browser{BrowserOpera, Version{10, 0, 0}}, OS{PlatformUnknown, OSUnknown, Version{0, 0, 0}}, DevicePhone}},
+
+	{"Opera/9.80 (J2ME/MIDP; Opera Mini/4.5.40380/60.297; U; en) Presto/2.12.423 Version/12.16",
+		UserAgent{
+			Browser{BrowserOpera, Version{12, 16, 0}}, OS{PlatformUnknown, OSUnknown, Version{0, 0, 0}}, DevicePhone}},
 
 	// TODO: support OneBrowser? https://play.google.com/store/apps/details?id=com.tencent.ibibo.mtt&hl=en_GB
 	// {"OneBrowser/3.1 (NokiaN70-1/5.0638.3.0.1)",
