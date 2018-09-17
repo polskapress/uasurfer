@@ -1,6 +1,8 @@
 package uasurfer
 
-import "testing"
+import (
+	"testing"
+)
 
 var testUAVars = []struct {
 	UA string
@@ -405,11 +407,11 @@ var testUAVars = []struct {
 
 	{"{UA:Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)}, ua: &{Browser:{Name:BrowserGoogleBot Version:{Major:0 Minor:0 Patch:0}} OS:{Platform:PlatformBot Name:OSBot Version:{Major:6 Minor:0 Patch:1}} DeviceType:DeviceComputer}",
 		UserAgent{
-			Browser{BrowserGoogleBot, Version{0, 0, 0}}, OS{PlatformBot, OSBot, Version{6, 0, 1}}, DeviceComputer}},
+			Browser{BrowserChrome, Version{41, 0, 2272}}, OS{PlatformLinux, OSAndroid, Version{6, 0, 1}}, DevicePhone}},
 
 	{"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
 		UserAgent{
-			Browser{BrowserGoogleBot, Version{0,0,0}}, OS{PlatformBot, OSBot, Version{6,0,0}}, DeviceComputer}},
+			Browser{BrowserSafari, Version{6, 0, 0}}, OS{PlatformiPhone, OSiOS, Version{6, 0, 0}}, DevicePhone}},
 
 	{"mozilla/5.0 (unknown; linux x86_64) applewebkit/538.1 (khtml, like gecko) phantomjs/2.1.1 safari/538.1",
 		UserAgent{
@@ -583,6 +585,9 @@ var testUAVars = []struct {
 	{"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari",
 		UserAgent{
 			Browser{BrowserChrome, Version{30, 0, 1599}}, OS{PlatformLinux, OSAndroid, Version{4, 4, 0}}, DevicePhone}},
+	{"Mozilla/5.0 (Linux; Android 4.4.2; pl-pl; SAMSUNG SM-T230 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/1.5 Chrome/28.0.1500.94 Safari/537.36",
+		UserAgent{
+			Browser{BrowserChrome, Version{28, 0, 1500}}, OS{PlatformLinux, OSAndroid, Version{4, 4, 2}}, DeviceTablet}},
 
 	{"Mozilla/5.0 (Linux; Android 6.0.1; SM-G930V Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36",
 		UserAgent{

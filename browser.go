@@ -28,7 +28,7 @@ func (u *UserAgent) evalBrowserName(ua string) bool {
 
 	if strings.Contains(ua, "applewebkit") {
 		switch {
-		case strings.Contains(ua, "googlebot"):
+		case strings.Contains(ua, "googlebot") && !strings.Contains(ua, "android") && !strings.Contains(ua, "iphone"):
 			u.Browser.Name = BrowserGoogleBot
 
 		case strings.Contains(ua, "opr/") || strings.Contains(ua, "opios/"):

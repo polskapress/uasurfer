@@ -35,6 +35,11 @@ func (u *UserAgent) evalDevice(ua string) {
 			u.DeviceType = DeviceTablet
 			return
 		}
+		// additional tablets: samsung galaxy tab
+		if strings.Contains(ua, "sm-t") {
+			u.DeviceType = DeviceTablet
+			return
+		}
 
 		u.DeviceType = DevicePhone // default to phone
 
